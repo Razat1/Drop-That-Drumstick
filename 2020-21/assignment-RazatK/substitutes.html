@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>P2508373</title>
+  <link rel="stylesheet" href="css/substitutes.css">
+</head>
+<body>
+  <header>
+    <div id="menuToggler">&#8801;</div>
+    <nav id="menu">
+      <a href="index.html">Start</a>
+      <a href="advantages.html">Advantages</a>
+      <a href="varieties.html">Varieties</a>
+      <a href="substitutes.html">Food Images</a>
+    </nav>
+    <h1>Below you can search up pictures of various meals</h1>
+  </header>
+  <section id="search">
+  <h2>Search by Category:</h2>
+    <label for="query"></label>
+    <input id="query" type="search" placeholder="e.g. Seafood or Vegetarian">
+  </section>
+  <section id="meta"><h3>Click to go to next page</h3>
+    <span id="count"></span>
+    <span id="pagination">
+      <button id="prev">&lt;</button>
+      page <span id="pageIndicator">0</span> of <span id="nPages">0</span>
+      <button id="next">&gt;</button>
+    </span>
+  </section>
+  <div id="loader"></div>
+  <main id="results"></main>
+  <footer>
+    developed using the <a href="https://www.themealdb.com/">The Mealdb API</a>
+  </footer>
+  <script src="js/substitutes.js"></script>
+</body>
+</html>

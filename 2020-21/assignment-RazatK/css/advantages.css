@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+body{
+  background-color:#c2c7c2;
+  margin: 0;
+}
+
+#menuToggler, nav{
+  background-color: rgba(204,255,255,0.7);
+}
+
+#menuToggler {
+  position: fixed;
+  top:0;
+  right:0;
+  font-size: 3em;
+  text-align: right;
+  line-height: 1em;
+  padding: 0 1rem;
+  z-index: 1;
+}
+
+section img{
+  width:20%;
+  float:left;
+  transition: 0.4s;
+}
+
+section img:hover {
+  transform: scale(1.2,1.2);
+}
+
+section img:hover::after{
+  opacity: 1;
+}
+
+nav{
+  position: fixed;
+  width:100vw;
+  height:100vh;
+  top:0;
+  flex-direction: column;
+  display:flex;
+  opacity: 0;
+  transform: translateY(-100vw);
+  transition: 0.4s;
+}
+nav.open {
+  transform: none;
+  opacity: 1;
+}
+nav a {
+  color: black;
+  text-align: center;
+  padding: 0.5em 1em;
+  margin:0;
+  font-size: 1.5em;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+h1 {
+  font-size: 2em;
+  margin:1rem;
+  text-align: center;
+  color:black;
+  line-height: 1.66;
+  font-family: Playfair;
+  text-decoration: underline;
+}
+
+section{
+  font-size: 1.5em;
+  flex-direction: column;
+  font-family: Playfair, cursive;
+  margin:0;
+}
+
+p{
+    margin: 0em;
+}
+
+h2{
+  font-size: 1.5em;
+  text-align: center;
+  text-decoration: underline;
+  margin:0;
+  font-family: Playfair;
+}
+
+@media screen and (min-width: 1000px) {
+
+  #menuToggler {
+    display: none;
+    background-color: transparent;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    transform: none;
+    opacity: 1;
+    height:auto;
+    width: auto;
+    position: static;
+  }
+  nav a{
+    background-color: #d4f7f3;
+    color: black;
+    text-align: center;
+    padding: 0.5em 1.5em;
+    font-size: 1.5em;
+    transition: background-color 0.2s;
+    text-decoration:none;
+    font-weight: bold;
+    margin:0.1em;
+    border-radius: 1em;
+    flex-grow: 1;
+  }
+
+  nav a:hover {
+    background-color: DarkGoldenRod;
+  }
+  #menuToggler{
+    opacity: 0;
+  }
+}
